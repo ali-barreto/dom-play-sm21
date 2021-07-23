@@ -1,3 +1,46 @@
-<h1>DOM play
+<html>
 
-</h1>
+<body>
+    <h1> DOM Play</h1>
+        <div id= "play">
+            <p><span data-actor="hamlet">Hamlet: To be or not to be? </span></p>
+            <p><span data-actor="skull">Skull: Are you talking to me? </span></p>
+            <p><span data-actor="hamlet">Hamlet: What did you say? </span></p>
+            <p><span data-actor="skull">Skull: Nothing, just a Skull here. </span></p>
+            <p><span data-actor="hamlet">Hamlet: Nice! </span></p>
+       </div>
+
+    <script>
+    //we're using CSS descendent selector to access spans
+    
+    const spans = document.querySelectorAll('div#play span');
+
+    console.log(spans);
+
+    
+   for(const mySpan of spans){
+        mySpan.addEventListener("click",function(ev){
+          alert(mySpan.dataset.actor);
+          highlightActor(mySpan.dataset.actor);
+        });
+   }
+
+
+   function highlightActor (myActor){
+
+        for(const mySpan of spans){
+
+            if (myActor == mySpan.dataset.actor){
+                mySpan.style.backgroundColor= 'yellow';
+            }else{
+                mySpan.style.backgroundColor = 'white';
+
+            }
+        }
+    
+    }
+        
+         
+    </script>
+</body>
+</html>
