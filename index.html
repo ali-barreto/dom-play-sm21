@@ -1,4 +1,15 @@
 <html>
+  <!DOCTYPE html>
+<html lang="en">
+ <head>
+     <title>A Script from my Favorite Movie</title>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="css/style.css" />
+<!--<style type="text/css"-->
+  
+ </head>
 
 <body>
     <h1> DOM Play</h1>
@@ -21,6 +32,9 @@
             <p><span data-actor="Both">Both: Hakuna Matata! </span></p>
        </div>
 
+       <footer>
+        <p>&copy; 2021 All Rights Reserved ~ <a href="https://validator.w3.org/nu/?doc=https://aefalshaw.github.io/DOMplay/" target="_blank">Check HTML</a> ~ <a href="https://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Check CSS</a></p>
+      </footer>
     <script>
     //we're using CSS descendent selector to access spans
     
@@ -42,7 +56,7 @@
         for(const mySpan of spans){
 
             if (myActor == mySpan.dataset.actor){
-                mySpan.style.backgroundColor= 'yellow';
+                mySpan.style.backgroundColor= 'lightOrange';
             }else{
                 mySpan.style.backgroundColor = 'white';
             
